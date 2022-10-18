@@ -1,0 +1,31 @@
+{
+  "name": "algos",
+  "version": "1.0.0",
+  "description": "Algorithms practicing ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iSchoolProjects/algos.git"
+  },
+  "keywords": [
+    "algo",
+    "data",
+    "structures"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iSchoolProjects/algos/issues"
+  },
+  "homepage": "https://github.com/iSchoolProjects/algos#readme",
+  "dependencies": {
+    "jest": "^29.2.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.18.6"
+  }
+}
