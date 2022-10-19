@@ -36,7 +36,7 @@ test('check for null for side size', () => {
   ).toBe(null);
 });
 
-test('checks for valid packages', () => {
+test('checks for valid packages two packages', () => {
   expect(
     parcelPacking(270, 20, 80, {
       height: 40,
@@ -46,4 +46,52 @@ test('checks for valid packages', () => {
       total: 5,
     })
   ).toEqual({ total: 2, itemsPerPackage: [4, 1] });
+});
+
+test('checks for valid packages single pacjage', () => {
+  expect(
+    parcelPacking(270, 20, 80, {
+      height: 40,
+      width: 30,
+      length: 30,
+      weight: 5,
+      total: 4,
+    })
+  ).toEqual({ total: 1, itemsPerPackage: [4] });
+});
+
+test('checks for valid packages single pacjage', () => {
+  expect(
+    parcelPacking(370, 20, 80, {
+      height: 40,
+      width: 30,
+      length: 30,
+      weight: 5,
+      total: 7,
+    })
+  ).toEqual({ total: 2, itemsPerPackage: [4, 3] });
+});
+
+test('checks for valid packages single pacjage', () => {
+  expect(
+    parcelPacking(260, 20, 80, {
+      height: 110,
+      width: 15,
+      length: 5,
+      weight: 5,
+      total: 3,
+    })
+  ).toEqual({ total: 2, itemsPerPackage: [2, 1] });
+});
+
+test('checks for valid packages single pacjage', () => {
+  expect(
+    parcelPacking(140, 20, 80, {
+      height: 40,
+      width: 25,
+      length: 10,
+      weight: 5,
+      total: 3,
+    })
+  ).toEqual({ total: 3, itemsPerPackage: [1, 1, 1] });
 });
