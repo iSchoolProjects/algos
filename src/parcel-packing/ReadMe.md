@@ -7,11 +7,12 @@ Please write the function that would use following parameters:
 
 - Max belt measure -> number (ex. 270)
 - Max weight -> number (ex. 10)
+- Max side length -> number (ex. 140)
 - Order items -> array of item values in object like (associative array) structure (height, width, length,weight,count) ([{height: 40,width: 30,length: 30, weight: 5, total: 3}])
 
 And outputs object (associative array) of packages that we would send and arrangement of those packages example({total: 1,itemsPerPackage:[1]})
 
-**Please note that if the weight of the single package or belt measure is higher of max inputs, return null. Items per package may be sorted in any order.**
+**Please note that if the weight of the single package or belt measure is higher of max inputs or max side length is smaller then longest side, return null. Items per package may be sorted in any order.**
 
 The equation for calculating belt measure is 2 _ (first highest package measure + 2 _ second highest package measure) + lowest package measure.
 
@@ -21,7 +22,7 @@ The equation for calculating belt measure is 2 _ (first highest package measure 
 {height: 40,width: 30,length: 30} would be 110 belt measure, etc.
 
 Example input:
-270, 20, [
+270, 20, 100 [
 {height: 40,width: 30,length: 30, weight: 5, total: 3},
 {height: 30,width: 20,length: 10, weight: 3, total: 3}
 ]
@@ -32,7 +33,7 @@ Explanation: When we start with first package and his belt size we start 170, we
 ---
 
 Example input:
-270, 20, [
+270, 20, 100 [
 {height: 40,width: 30,length: 30, weight: 25, total: 3},
 {height: 30,width: 20,length: 10, weight: 3, total: 3}
 ]
@@ -43,7 +44,7 @@ Explanation: Weight of single package (marked in bold above) is higher (25) then
 ---
 
 Example input:
-270, 20, [
+270, 20, 120 [
 {height: 100,width: 30,length: 30, weight: 2, total: 3},
 {height: 30,width: 20,length: 10, weight: 3, total: 3}
 ]
@@ -55,6 +56,7 @@ Explanation: Belt size of single package (marked in bold above) is higher (290) 
 
 - Max belt size 50 <= n <= 100
 - Max weight 1 <= n <= 50
+- Max side lenght 30 <= n <= 150
 - Weight of item 1 <= n <=25
 - Total of item 1 <= n <= 1000
 - Length of items array 1 <= n <= 300
