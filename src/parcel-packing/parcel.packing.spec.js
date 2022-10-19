@@ -48,7 +48,7 @@ test('checks for valid packages two packages', () => {
   ).toEqual({ total: 2, itemsPerPackage: [4, 1] });
 });
 
-test('checks for valid packages single pacjage', () => {
+test('checks for valid packages single package', () => {
   expect(
     parcelPacking(270, 20, 80, {
       height: 40,
@@ -60,7 +60,7 @@ test('checks for valid packages single pacjage', () => {
   ).toEqual({ total: 1, itemsPerPackage: [4] });
 });
 
-test('checks for valid packages single pacjage', () => {
+test('checks for valid packages two packages 4,3', () => {
   expect(
     parcelPacking(370, 20, 80, {
       height: 40,
@@ -72,9 +72,9 @@ test('checks for valid packages single pacjage', () => {
   ).toEqual({ total: 2, itemsPerPackage: [4, 3] });
 });
 
-test('checks for valid packages single pacjage', () => {
+test('checks for valid packages single packages 2,1', () => {
   expect(
-    parcelPacking(260, 20, 80, {
+    parcelPacking(260, 20, 120, {
       height: 110,
       width: 15,
       length: 5,
@@ -84,7 +84,7 @@ test('checks for valid packages single pacjage', () => {
   ).toEqual({ total: 2, itemsPerPackage: [2, 1] });
 });
 
-test('checks for valid packages single pacjage', () => {
+test('checks for valid packages three packages', () => {
   expect(
     parcelPacking(140, 20, 80, {
       height: 40,
@@ -94,4 +94,16 @@ test('checks for valid packages single pacjage', () => {
       total: 3,
     })
   ).toEqual({ total: 3, itemsPerPackage: [1, 1, 1] });
+});
+
+test('checks for valid packages seven packages', () => {
+  expect(
+    parcelPacking(340, 20, 80, {
+      height: 40,
+      width: 25,
+      length: 15,
+      weight: 15,
+      total: 7,
+    })
+  ).toEqual({ total: 7, itemsPerPackage: [1, 1, 1, 1, 1, 1, 1] });
 });
