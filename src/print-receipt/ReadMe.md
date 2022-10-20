@@ -50,4 +50,4 @@ The product is short and it can fit into one line. This is technically the last 
 
 **Note: Using Regular expression for this exercise is not allowed !!!**
 
-Created with <3 by [Branimir](https://github.com/orgs/iSchoolProjects/people/Branimir)
+Created with <3 by [Branimir](https://github.com/Branimir)
